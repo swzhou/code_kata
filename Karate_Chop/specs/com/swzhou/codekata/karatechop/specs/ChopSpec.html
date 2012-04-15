@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+    <title>Karate Chop</title>
+</head>
+<body>
+<h2>Karate Chop</h2>
+<dl>
+    <dt>state transfer machine</dt>
+    <dd>
+        <table concordion:execute="#currentState = calculateCurrentState(#searchValue, #currentStartIndex, #currentEndIndex, #currentMiddleValue)">
+            <thead>
+            <tr>
+                <th concordion:set="#searchValue">search value</th>
+                <th concordion:set="#currentStartIndex">current start index</th>
+                <th concordion:set="#currentEndIndex">current end index</th>
+                <th concordion:assertEquals="#currentState.currentMiddleIndex">current middle index</th>
+                <th concordion:set="#currentMiddleValue">current middle value</th>
+                <th concordion:assertEquals="#currentState.nextStartIndex">next start index</th>
+                <th concordion:assertEquals="#currentState.nextEndIndex">next end index</th>
+                <th concordion:assertEquals="#currentState.found">found?</th>
+                <th concordion:assertEquals="#currentState.stop">stop?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>3</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+                <td>1</td>
+                <td>1</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>5</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>-1</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>6</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td>4</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>5</td>
+                <td>2</td>
+                <td>1</td>
+                <td>false</td>
+                <td>true</td>
+            </tr>
+            </tbody>
+        </table>
+    </dd>
+</dl>
+</body>
+</html>

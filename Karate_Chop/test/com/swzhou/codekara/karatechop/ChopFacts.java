@@ -3,6 +3,7 @@ package com.swzhou.codekara.karatechop;
 import com.swzhou.codekata.karatechop.IterationChop;
 import com.swzhou.codekata.karatechop.RecursionChop;
 import com.swzhou.codekata.karatechop.IChop;
+import com.swzhou.codekata.karatechop.StateMachineChop;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,7 +27,9 @@ public class ChopFacts {
 
     @Before
     public void setUp() {
-        chop = new IterationChop();//new RecursionChop();
+        //chop = new RecursionChop();
+        //chop = new IterationChop();
+        chop = new StateMachineChop();
     }
 
     @Test
